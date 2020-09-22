@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Authorization</title>
+</head>
+
+<body>
+    Welcome <%= currentUser %><br><br>
+    <%= client %> wants access to your account.<br>
+    Click yes to authorize else press No.<br><br>
+    <form action='/auth/<%= client %>/yes/manual' method="POST">
+        <input type="submit" value='Yes' />
+    </form>
+    <form action='/auth/<%= client %>/no/manual' method="POST">
+        <input type="submit" value='No' />
+    </form>
+
+</body>
+
+</html>

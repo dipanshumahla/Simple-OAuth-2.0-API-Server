@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Login Page</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="text" placeholder="Username" /><br>
+        <input type="password" placeholder="Password" /><br>
+        <input type="button" value="Login" /><br>
+        <hr><br>Login using OAuth 2.0<br>
+        <input type="button" value="OAuth Login" id="oauthlogin" /><br>
+
+    </form>
+</body>
+<script>
+    document.getElementById('oauthlogin').addEventListener('click', e => {
+        window.location.href = "http://localhost:3001/auth?clientid=naaniz.com";
+    })
+</script>
+
+</html>
