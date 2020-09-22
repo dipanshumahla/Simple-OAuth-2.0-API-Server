@@ -6,6 +6,7 @@ var parser = require('body-parser');
 app.use(parser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
+app.set('views', './application/views');
 
 app.use('/', routes);
 
@@ -13,4 +14,4 @@ var port = process.env.port || 3000;
 
 app.listen(port, () => {
     console.log(`Application is online at port ${port}`);
-})
+});

@@ -2,7 +2,8 @@
 
 var client = {
     name: "naaniz.com",
-    callbackURL: "http://localhost:3000/authorized"
+    callbackURL: "http://localhost:3000/authorized",
+    callbackURLError: "http://localhost:3000/error"
 }
 
 var getClientName = (clientID) => {

@@ -44,14 +44,14 @@ router.post('/:clientid/:response/:type', (req, res) => {
     var clientResponse = {}
     var clientInfo = clients.getClientInfo(clientid);
 
-    if (response == 'No') {
+    if (response == 'no') {
         clientResponse.status = false;
         clientResponse.message = "User didn't authorized!";
         req.body = clientResponse;
-        res.redirect(307, clientInfo.callbackURL);
+        res.redirect(307, clientInfo.callbackURLError);
         return;
     }
-    if (req.params.type == 'auto') {
+    if (req.params.type == 'manual') {
         var authorizationCode = Math.random().toString(36).substring(2);
         user.authorizeClient(clientid, authorizationCode);
         clientResponse.authorizationCode = authorizationCode;

@@ -10,7 +10,12 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/authorized', (req, res) => {
-    res.send("You are authorized via OAuth 2.0 Authentication");
+    res.send("You are authorized via OAuth 2.0 API");
 });
+
+
+router.post('/error', (req, res) => {
+    res.send("Didn't got the access!");
+})
 
 module.exports = router;
